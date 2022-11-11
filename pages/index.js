@@ -3,8 +3,13 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Section from '../components/Section'
 import { ChakraProvider } from "@chakra-ui/react";
+import { useRouter } from "next/router";
+
 
 export default function Home() {
+  const history = useRouter();
+  history.push("/login";)
+
   return (
     <div className={styles.container}>
       <Head>
