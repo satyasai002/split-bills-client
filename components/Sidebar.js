@@ -27,7 +27,7 @@ export default function Sidebar({ userData, loading, groups }) {
       localStorage.clear();
     }
     localStorage.clear();
-    history.push("/login");
+    history.push("/");
   }
   return (
     <Section>

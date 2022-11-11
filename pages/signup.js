@@ -46,7 +46,7 @@ export default function Signup(){
        let result = await axios.post("https://split-bills-api.onrender.com/user/signup",item);
        console.log(result.status);
        if (result != null) {
-        history.push("/login");
+        history.push("/");
        } else {
          setLoading(false);
          return;
@@ -186,7 +186,7 @@ export default function Signup(){
                     fontWeight="500"
                     color="#674fa2"
                     onClick={() => {
-                      history.push("/login");
+                      history.push("/");
                     }}
                   >
                     Log In

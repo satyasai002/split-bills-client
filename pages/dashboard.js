@@ -31,7 +31,7 @@ export default function Dashboard() {
             if (error.response) {
               if (error.response.status == 401) {
                 localStorage.clear();
-                history.push("/login");
+                history.push("/");
               }
             }
           });
@@ -44,7 +44,7 @@ export default function Dashboard() {
                 setUserData();
                 setGroups();
                 setToken();
-                history.push("/login");
+                history.push("/");
               }
             }
           });
