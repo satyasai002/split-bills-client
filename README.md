@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-[`Website link`](https://dazzling-pony-fa1862.netlify.app/).
+Split-bills Netlify [`Website link`](https://dazzling-pony-fa1862.netlify.app/).
 
 ## Getting Started
 
