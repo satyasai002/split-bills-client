@@ -35,7 +35,6 @@ export default function Signup(){
      }
    }, []);
    async function signup() {
-     setLoading(true);
      let item = {
        fullName: fullName,
        mobile: mobile,
@@ -47,9 +46,6 @@ export default function Signup(){
        console.log(result.status);
        if (result != null) {
         history.push("/");
-       } else {
-         setLoading(false);
-         return;
        }
      } catch (e) {
        console.log(e);

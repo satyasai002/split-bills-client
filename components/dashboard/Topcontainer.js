@@ -21,7 +21,19 @@ export default function TopContainer({ userData ,loading }) {
           return Promise.reject(error);
         }
       );
-      let Groups = await axios.get(`https://split-bills-api.onrender.com/group/`);
+      let Groups = await axios
+        .get(`https://split-bills-api.onrender.com/group/`)
+        .catch(function (error) {
+          if (error.response) {
+            if (error.response.status == 401) {
+              localStorage.clear();
+              setUserData();
+              setGroups();
+              setToken();
+              history.push("/");
+            }
+          }
+        });
       setGroup(Groups.data);
     }
     fetchData();

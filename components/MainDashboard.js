@@ -55,7 +55,19 @@ export default function MainDashboard({ userData, loading }) {
           return Promise.reject(error);
         }
       );
-      let Users = await axios.post(`https://split-bills-api.onrender.com/user/`, item);
+      let Users = await axios
+        .post(`https://split-bills-api.onrender.com/user/`, item)
+        .catch(function (error) {
+          if (error.response) {
+            if (error.response.status == 401) {
+              localStorage.clear();
+              setUserData();
+              setGroups();
+              setToken();
+              history.push("/");
+            }
+          }
+        });
       setUsers(Users.data);
     }
     fetchData();

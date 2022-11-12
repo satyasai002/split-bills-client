@@ -105,7 +105,19 @@ export default function Organizations({
            return Promise.reject(error);
          }
        );
-       const res = await axios.delete(`https://split-bills-api.onrender.com/expense/${expense}`);
+       const res = await axios
+         .delete(`https://split-bills-api.onrender.com/expense/${expense}`)
+         .catch(function (error) {
+           if (error.response) {
+             if (error.response.status == 401) {
+               localStorage.clear();
+               setUserData();
+               setGroups();
+               setToken();
+               history.push("/");
+             }
+           }
+         });
        
        if (res.status == 200) {
          window.location.reload();
