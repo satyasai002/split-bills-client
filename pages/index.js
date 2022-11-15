@@ -158,7 +158,6 @@ export default function login() {
                 >
                   <FormControl isInvalid={emailIsError | inValidError}>
                     <Text
-                      fontFamily="'Poppins'"
                       fontWeight="500"
                       fontSize="18px"
                     >

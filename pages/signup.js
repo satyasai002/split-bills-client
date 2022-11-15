@@ -104,7 +104,7 @@ export default function Signup(){
             </Flex>
             <Flex px={{ base: 2, lg: "50px" }} flexDirection="column" gap="9px">
               <Flex flexDirection="column" justifyContent="center" width="100%">
-                <Text fontFamily="'Poppins'" fontWeight="500" fontSize="18px">
+                <Text  fontWeight="500" fontSize="18px">
                   Name
                 </Text>
                 <Input
